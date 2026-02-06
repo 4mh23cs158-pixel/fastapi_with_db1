@@ -2,7 +2,8 @@ from fastapi import FastAPI
 from routes.user_routes import router as user_router
 from sqlalchemy import create_engine
 import os
-from db import Base, DATABASE_URL
+from db import DATABASE_URL
+from models import Base
 app = FastAPI() 
 
 app.include_router(user_router)
@@ -19,4 +20,3 @@ def read_root():
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="[IP_ADDRESS]", port=8000, reload=True)
-
