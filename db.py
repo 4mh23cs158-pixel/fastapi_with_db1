@@ -8,7 +8,7 @@ load_dotenv()
 
 
 DATABASE_URL = os.getenv("DATABASE_URL")
-print("DATABASE_URL", DATABASE_URL)
+print("DATABASE_URL ahhah", DATABASE_URL)
 # create engine once at module level
 engine = create_engine(DATABASE_URL)
 
