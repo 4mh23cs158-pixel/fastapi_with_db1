@@ -29,10 +29,7 @@ Base.metadata.create_all(engine)
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
-@app.post("/signup")
-def signup(email: str, password: str):
-    # save user to database
-    return {"message": "User created successfully"}
+
 
 
 
